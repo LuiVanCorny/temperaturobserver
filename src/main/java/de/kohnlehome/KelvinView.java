@@ -11,6 +11,8 @@ public class KelvinView implements Observer {
 
     @Override
     public void update() {
-        System.out.println("Kelvin: " + temperatureModel.getTemperatureInKelvin());
+        double temperature = temperatureModel.getTemperatureInKelvin();
+        String text = String.format("Kelvin: %.1fK", temperature);
+        System.out.println(text);
     }
 }

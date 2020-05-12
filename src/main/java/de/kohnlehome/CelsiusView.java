@@ -10,6 +10,9 @@ public class CelsiusView implements Observer {
 
     @Override
     public void update() {
-        System.out.println("Celsius: temperature has changed!");
+        double temperatureInKelvin = temperatureModel.getTemperatureInKelvin();
+        double temperatureInCelsius = temperatureInKelvin - 273.15;
+        String text = String.format("Celsius: %.1fC°", temperatureInCelsius);
+        System.out.println(text);
     }
 }
